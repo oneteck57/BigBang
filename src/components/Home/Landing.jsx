@@ -1,3 +1,9 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Landing = () => {
   const stars = Array.from({ length: 25 }, () => ({
     top: `${Math.random() * 100}vh`,
@@ -6,11 +12,45 @@ const Landing = () => {
     opacity: Math.random() * 0.5 + 0.5,
   }));
 
+  const busRef = useRef(null);
+  const roadRef = useRef(null);
+  const globeRef = useRef(null);
+
+  useEffect(() => {
+    const roadElement = roadRef.current;
+    const busElement = busRef.current;
+    const globeElement = globeRef.current;
+
+    gsap.to(busElement, {
+      x: "-100vw",
+      ease: "none",
+      scrollTrigger: {
+        trigger: roadElement,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    gsap.to(globeElement, {
+      y: "50vh",
+      opacity: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: globeElement,
+        start: "top ",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
+
   return (
     <>
       <div className="landing h-[140vh] bg-[#2F2F2F] relative overflow-hidden flex flex-col items-center justify-center text-center text-white">
         {/* Globe */}
         <img
+          ref={globeRef}
           src="/assets/earth.png"
           alt="globe"
           className="absolute select-none -mt-60"
@@ -138,24 +178,28 @@ const Landing = () => {
       </div>
 
       {/* Road Image Container */}
-      <div className="w-full bg-[#2F2F2F] flex flex-col justify-center">
+      <div ref={roadRef} className="w-full bg-[#2F2F2F] relative">
+        {/* Bus Image */}
         <img
+          ref={busRef}
           src="/assets/bus.png"
-          alt="road"
-          className="select-none bottom-0"
+          alt="bus"
+          className="absolute bottom-0 right-0 select-none"
           draggable="false"
           style={{
             width: "40vw",
             height: "auto",
+            zIndex: 9,
           }}
         />
+
+        {/* Road Image */}
         <img
           src="/assets/road.png"
           alt="road"
-          className="select-none"
+          className="w-full select-none"
           draggable="false"
           style={{
-            width: "100vw",
             height: "auto",
             zIndex: 8,
           }}
