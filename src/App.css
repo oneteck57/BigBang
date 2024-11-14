@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.luckiest-guy-outline {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 7px 7px 0px black, -7px -7px 0px black, 7px -7px 0px black,
+    -7px 7px 0px black;
+}
+.luckiest-guy-small-outline {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 4px 4px 0px black, -4px -4px 0px black, 4px -4px 0px black,
+    -4px 4px 0px black;
+}
+
+/* Bold version */
+.luckiest-guy-bold {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Italic version */
+.luckiest-guy-italic {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Bold Italic version */
+.luckiest-guy-bold-italic {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Custom sizes */
+.luckiest-guy-small {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.luckiest-guy-medium {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.luckiest-guy-large {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-size: 48px;
+}
