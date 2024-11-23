@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../../App.css";
 const Header = () => {
   return (
@@ -5,19 +6,19 @@ const Header = () => {
       <nav className="flex justify-between items-center">
         <ul className="flex space-x-20 text-white text-xl  luckiest-guy-small-outline">
           <li>
-            <a href="#home">Home</a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <a href="#about">About</a>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <a href="#highlights">Highlights</a>
+            <NavLink to="/highlights">Highlights</NavLink>
           </li>
           <li>
-            <a href="#schedule">Schedule</a>
+            <NavLink to="/schedule">Schedule</NavLink>
           </li>
           <li>
-            <a href="#registration">Registration</a>
+            <NavLink to="/registration">Registration</NavLink>
           </li>
         </ul>
       </nav>
