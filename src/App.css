@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 
 .luckiest-guy-regular {
   font-family: "Luckiest Guy", cursive;
@@ -10,15 +12,22 @@
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
-  text-shadow: 7px 7px 0px black, -7px -7px 0px black, 7px -7px 0px black,
-    -7px 7px 0px black;
+  text-shadow: 2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black,
+    -2px 2px 0px black;
 }
 .luckiest-guy-small-outline {
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
-  text-shadow: 4px 4px 0px black, -4px -4px 0px black, 4px -4px 0px black,
-    -4px 4px 0px black;
+  text-shadow: 2px 2px 0px black, -2px -2px 0px black, 2px -2px 0px black,
+    -2px 2px 0px black;
+}
+.luckiest-guy-small-outline-yellow {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 0px #f3edd3, -2px -2px 0px #f3edd3, 2px -2px 0px #f3edd3,
+    -2px 2px 0px #f3edd3;
 }
 
 /* Bold version */
@@ -49,6 +58,11 @@
   font-size: 12px;
 }
 
+.luckiest-guy-h2 {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+}
+
 .luckiest-guy-medium {
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
@@ -59,4 +73,21 @@
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-size: 48px;
+}
+
+.luckiest-guy-custom-number {
+  font-family: "Luckiest Guy", cursive;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.abel {
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
