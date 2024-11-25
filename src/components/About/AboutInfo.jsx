@@ -1,7 +1,27 @@
 import "../../App.css";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const AboutInfo = () => {
+  useEffect(() => {
+    gsap.to(".soil-image", {
+      x: -200,
+      y: -200,
+      scrollTrigger: {
+        trigger: ".about-container",
+        start: "top center",
+        end: "bottom top",
+        scrub: 1,
+      },
+      duration: 1,
+    });
+  }, []);
+
   return (
-    <div className="h-[120vh] bg-[#F3EDD3] relative flex flex-col items-center justify-center overflow-hidden px-6 ">
+    <div className="about-container h-[120vh] bg-[#F3EDD3] relative flex flex-col items-center justify-center overflow-hidden px-6">
       <div className="">
         {/* Background Image */}
         <img
@@ -22,7 +42,7 @@ const AboutInfo = () => {
             <img
               src="/assets/soil.png"
               alt="soil"
-              className="w-[400px] h-[600px] z-50"
+              className="soil-image w-[400px] h-[550px] z-50"
             />
           </div>
 
