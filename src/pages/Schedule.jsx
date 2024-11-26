@@ -1,5 +1,11 @@
+import DayOne from "../components/Schedule/DayOne";
+
 const Schedule = () => {
-  return <div>Schedule</div>;
+  return (
+    <>
+      <DayOne />
+    </>
+  );
 };
 
 export default Schedule;
