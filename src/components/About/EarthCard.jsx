@@ -18,7 +18,7 @@ const EarthCard = () => {
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".earth-card-container",
-          start: "top 80%",
+          start: "top 50%",
           toggleActions: "play reverse play reverse",
         },
       }
